@@ -23,6 +23,10 @@ int printf(const char *format, ...);
 
 int sprintf(char *out, const char *format, ...);
 
+int scanf(const char *format, ...);
+
+int sscanf(char *out, const char *format, ...);
+
 #define snprintf(out, n, fmt, ...) \
     sprintf(out, fmt, ## __VA_ARGS__)
 
