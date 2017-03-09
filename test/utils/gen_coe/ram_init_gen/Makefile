@@ -49,6 +49,7 @@ all: $(OBJECTS)
 	$(OBJDUMP) -d boot > code.txt
 	python python/bin2text.py boot.bin ram.txt
 	python python/load_coe_gen.py
+	python python/instr_is_legal.py	
 
 flash: $(OBJECTS)
 	$(LD) $(LDFLAGS) -T rom.ld $(OBJECTS) -o $(ROM)
